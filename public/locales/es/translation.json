@@ -32,7 +32,14 @@
     "loading": "Cargando...",
     "inProgress": "Esta página está en construcción.",
     "save": "Guardar",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "weekday0": "Lunes",
+    "weekday1": "Martes",
+    "weekday2": "Miércoles",
+    "weekday3": "Jueves",
+    "weekday4": "Viernes",
+    "weekday5": "Sábado",
+    "weekday6": "Domingo"
   },
   "pages": {
     "salonDetail": "Salón",
@@ -79,5 +86,10 @@
     "minutesShort": "min",
     "experienceYears": "{{count}} año de experiencia",
     "experienceYears_other": "{{count}} años de experiencia"
+  },
+  "masters": {
+    "workingHoursTitle": "Horario de trabajo",
+    "noWorkingHours": "Sin horario definido",
+    "dayOff": "Día libre"
   }
 }
