@@ -63,6 +63,23 @@
     "nearby": "Salony w pobliżu",
     "emptyNearby": "Nie znaleziono salonów w pobliżu",
     "locationUnavailable": "Lokalizacja niedostępna — włącz geolokalizację, aby zobaczyć salony w pobliżu",
-    "searchPlaceholder": "Szukaj lokalizacji..."
+    "searchPlaceholder": "Szukaj lokalizacji...",
+    "servicesTitle": "Usługi",
+    "mastersTitle": "Mistrzowie",
+    "reviewsTitle": "Opinie",
+    "noServices": "Brak usług",
+    "noMasters": "Brak mistrzów",
+    "noReviews": "Brak opinii",
+    "bookNow": "Zarezerwuj",
+    "manage": "Zarządzaj",
+    "joinSalon": "Dołącz do salonu",
+    "joinRequestSent": "Wniosek wysłany",
+    "joinRequestError": "Nie udało się wysłać wniosku",
+    "anonymous": "Anonimowy",
+    "minutesShort": "min",
+    "experienceYears_one": "{{count}} rok doświadczenia",
+    "experienceYears_few": "{{count}} lata doświadczenia",
+    "experienceYears_many": "{{count}} lat doświadczenia",
+    "experienceYears_other": "{{count}} lat doświadczenia"
   }
 }

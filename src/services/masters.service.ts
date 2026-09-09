@@ -1,26 +1,28 @@
 import { apiClient } from './client';
-import type { MasterProfile, MasterService } from '../types/api';
+import type { MasterProfile, MasterService, PaginatedResult } from '../types/api';
 
 export interface AssignServiceDto {
-  masterId: string;
+  masterId: number;
   serviceId: string;
   customPrice?: number;
   customDuration?: number;
 }
 
 export const mastersService = {
-  getAll: async (salonId?: string): Promise<MasterProfile[]> => {
-    const res = await apiClient.get<MasterProfile[]>('/masters', { params: { salonId } });
+  getAll: async (salonId?: string): Promise<PaginatedResult<MasterProfile>> => {
+    const res = await apiClient.get<PaginatedResult<MasterProfile>>('/masters', {
+      params: { salonId },
+    });
     return res.data;
   },
 
-  getById: async (id: string): Promise<MasterProfile> => {
+  getById: async (id: number): Promise<MasterProfile> => {
     const res = await apiClient.get<MasterProfile>(`/masters/${id}`);
     return res.data;
   },
 
   assignService: async (
-    masterId: string,
+    masterId: number,
     serviceId: string,
     customPrice?: number,
     customDuration?: number,

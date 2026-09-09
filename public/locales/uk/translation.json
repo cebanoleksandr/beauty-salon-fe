@@ -63,6 +63,23 @@
     "nearby": "Салони поруч",
     "emptyNearby": "Поруч не знайдено салонів",
     "locationUnavailable": "Геолокація недоступна — увімкніть її, щоб бачити салони поруч",
-    "searchPlaceholder": "Пошук місця..."
+    "searchPlaceholder": "Пошук місця...",
+    "servicesTitle": "Послуги",
+    "mastersTitle": "Майстри",
+    "reviewsTitle": "Відгуки",
+    "noServices": "Послуг ще немає",
+    "noMasters": "Майстрів ще немає",
+    "noReviews": "Відгуків ще немає",
+    "bookNow": "Забронювати",
+    "manage": "Керувати",
+    "joinSalon": "Приєднатися до салону",
+    "joinRequestSent": "Заявку надіслано",
+    "joinRequestError": "Не вдалося надіслати заявку",
+    "anonymous": "Анонім",
+    "minutesShort": "хв",
+    "experienceYears_one": "{{count}} рік досвіду",
+    "experienceYears_few": "{{count}} роки досвіду",
+    "experienceYears_many": "{{count}} років досвіду",
+    "experienceYears_other": "{{count}} років досвіду"
   }
 }

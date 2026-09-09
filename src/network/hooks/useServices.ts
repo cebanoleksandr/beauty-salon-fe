@@ -5,17 +5,27 @@ import {
   type CreateServiceDto,
   type UpdateServiceDto,
 } from '../../services/services.service';
+import type { PaginationQuery } from '../../types/api';
 import { EQueries } from '../_types';
 
-export const useServices = (salonId?: string) =>
+export const useServicesBySalon = (salonId: number, pagination?: PaginationQuery) =>
   useQuery({
-    queryKey: [EQueries.SERVICES, salonId],
-    queryFn: () => servicesService.getAll(salonId),
+    queryKey: [EQueries.SERVICES, salonId, pagination],
+    queryFn: () => servicesService.getBySalon(salonId, pagination),
+    enabled: !!salonId,
+  });
+
+export const useService = (id: number) =>
+  useQuery({
+    queryKey: [EQueries.SERVICES, id],
+    queryFn: () => servicesService.getById(id),
+    enabled: !!id,
   });
 
 export const useCreateService = () => {
   return useMutation({
-    mutationFn: (data: CreateServiceDto) => servicesService.create(data),
+    mutationFn: ({ salonId, data }: { salonId: number; data: CreateServiceDto }) =>
+      servicesService.create(salonId, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SERVICES] });
     },
@@ -24,7 +34,7 @@ export const useCreateService = () => {
 
 export const useUpdateService = () => {
   return useMutation({
-    mutationFn: ({ id, data }: { id: string; data: UpdateServiceDto }) =>
+    mutationFn: ({ id, data }: { id: number; data: UpdateServiceDto }) =>
       servicesService.update(id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SERVICES] });
@@ -34,7 +44,7 @@ export const useUpdateService = () => {
 
 export const useDeleteService = () => {
   return useMutation({
-    mutationFn: (id: string) => servicesService.delete(id),
+    mutationFn: (id: number) => servicesService.delete(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SERVICES] });
     },

@@ -63,6 +63,21 @@
     "nearby": "Nearby salons",
     "emptyNearby": "No salons found nearby",
     "locationUnavailable": "Location unavailable — enable geolocation to see nearby salons",
-    "searchPlaceholder": "Search a location..."
+    "searchPlaceholder": "Search a location...",
+    "servicesTitle": "Services",
+    "mastersTitle": "Masters",
+    "reviewsTitle": "Reviews",
+    "noServices": "No services yet",
+    "noMasters": "No masters yet",
+    "noReviews": "No reviews yet",
+    "bookNow": "Book now",
+    "manage": "Manage",
+    "joinSalon": "Join this salon",
+    "joinRequestSent": "Join request sent",
+    "joinRequestError": "Failed to send join request",
+    "anonymous": "Anonymous",
+    "minutesShort": "min",
+    "experienceYears": "{{count}} year of experience",
+    "experienceYears_other": "{{count}} years of experience"
   }
 }

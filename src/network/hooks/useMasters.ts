@@ -9,7 +9,7 @@ export const useMasters = (salonId?: string) =>
     queryFn: () => mastersService.getAll(salonId),
   });
 
-export const useMaster = (id: string) =>
+export const useMaster = (id: number) =>
   useQuery({
     queryKey: [EQueries.MASTER, id],
     queryFn: () => mastersService.getById(id),
@@ -24,7 +24,7 @@ export const useAssignService = () => {
       customPrice,
       customDuration,
     }: {
-      masterId: string;
+      masterId: number;
       serviceId: string;
       customPrice?: number;
       customDuration?: number;

@@ -63,6 +63,21 @@
     "nearby": "Salones cercanos",
     "emptyNearby": "No se encontraron salones cercanos",
     "locationUnavailable": "Ubicación no disponible: activa la geolocalización para ver salones cercanos",
-    "searchPlaceholder": "Buscar una ubicación..."
+    "searchPlaceholder": "Buscar una ubicación...",
+    "servicesTitle": "Servicios",
+    "mastersTitle": "Maestros",
+    "reviewsTitle": "Reseñas",
+    "noServices": "Todavía no hay servicios",
+    "noMasters": "Todavía no hay maestros",
+    "noReviews": "Todavía no hay reseñas",
+    "bookNow": "Reservar",
+    "manage": "Gestionar",
+    "joinSalon": "Unirse a este salón",
+    "joinRequestSent": "Solicitud enviada",
+    "joinRequestError": "No se pudo enviar la solicitud",
+    "anonymous": "Anónimo",
+    "minutesShort": "min",
+    "experienceYears": "{{count}} año de experiencia",
+    "experienceYears_other": "{{count}} años de experiencia"
   }
 }

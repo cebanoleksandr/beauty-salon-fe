@@ -11,7 +11,7 @@ export interface PaginatedResult<T> {
   total: number;
   page: number;
   limit: number;
-  totalPages: number;
+  totalPages?: number;
 }
 
 // ==========================================
@@ -63,8 +63,8 @@ export interface NearbySalonsQuery {
 // Послуги (Services) та Зв'язки майстра
 // ==========================================
 export interface ServiceItem {
-  id: string;
-  salonId: string;
+  id: number;
+  salonId: number;
   salon?: Salon;
   name: string;
   description?: string | null;
@@ -88,17 +88,20 @@ export interface MasterService {
 // ==========================================
 // Профіль майстра
 // ==========================================
+export interface MasterProfileUser {
+  id: number;
+  firstName: string;
+  lastName: string;
+}
+
 export interface MasterProfile {
-  id: string;
-  userId: string;
-  user: User;
-  salonId?: string | null;
-  salon?: Salon | null;
+  id: number;
+  userId: number;
+  salonId: number;
+  user: MasterProfileUser;
   bio?: string | null;
-  rating: number;
-  reviewCount: number;
-  services?: MasterService[];
-  workingHours?: WorkingHour[];
+  experience?: number | null;
+  imageUrl?: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -202,6 +205,10 @@ export interface Review {
   comment: string;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface SalonReviewsResult extends PaginatedResult<Review> {
+  averageRating: number | null;
 }
 
 export interface CreateReviewDto {

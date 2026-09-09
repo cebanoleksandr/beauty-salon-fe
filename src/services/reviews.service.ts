@@ -1,5 +1,5 @@
 import { apiClient } from './client';
-import type { CreateReviewDto, Review } from '../types/api';
+import type { CreateReviewDto, Review, SalonReviewsResult } from '../types/api';
 
 export const reviewsService = {
   create: async (data: CreateReviewDto): Promise<Review> => {
@@ -7,8 +7,8 @@ export const reviewsService = {
     return res.data;
   },
 
-  getBySalon: async (salonId: string): Promise<Review[]> => {
-    const res = await apiClient.get<Review[]>(`/reviews/salon/${salonId}`);
+  getBySalon: async (salonId: string): Promise<SalonReviewsResult> => {
+    const res = await apiClient.get<SalonReviewsResult>(`/reviews/salon/${salonId}`);
     return res.data;
   },
 };

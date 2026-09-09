@@ -1,26 +1,39 @@
 import { apiClient } from './client';
-import type { ServiceItem } from '../types/api';
+import type { PaginatedResult, PaginationQuery, ServiceItem } from '../types/api';
 
-export type CreateServiceDto = Omit<ServiceItem, 'id' | 'createdAt' | 'updatedAt' | 'salon'>;
+export type CreateServiceDto = Omit<
+  ServiceItem,
+  'id' | 'createdAt' | 'updatedAt' | 'salon' | 'salonId'
+>;
 export type UpdateServiceDto = Partial<CreateServiceDto>;
 
 export const servicesService = {
-  getAll: async (salonId?: string): Promise<ServiceItem[]> => {
-    const res = await apiClient.get<ServiceItem[]>('/services', { params: { salonId } });
+  getBySalon: async (
+    salonId: number,
+    pagination?: PaginationQuery,
+  ): Promise<PaginatedResult<ServiceItem>> => {
+    const res = await apiClient.get<PaginatedResult<ServiceItem>>(`/services/salon/${salonId}`, {
+      params: pagination,
+    });
     return res.data;
   },
 
-  create: async (data: CreateServiceDto): Promise<ServiceItem> => {
-    const res = await apiClient.post<ServiceItem>('/services', data);
+  getById: async (id: number): Promise<ServiceItem> => {
+    const res = await apiClient.get<ServiceItem>(`/services/${id}`);
     return res.data;
   },
 
-  update: async (id: string, data: UpdateServiceDto): Promise<ServiceItem> => {
+  create: async (salonId: number, data: CreateServiceDto): Promise<ServiceItem> => {
+    const res = await apiClient.post<ServiceItem>(`/services/salon/${salonId}`, data);
+    return res.data;
+  },
+
+  update: async (id: number, data: UpdateServiceDto): Promise<ServiceItem> => {
     const res = await apiClient.patch<ServiceItem>(`/services/${id}`, data);
     return res.data;
   },
 
-  delete: async (id: string): Promise<void> => {
+  delete: async (id: number): Promise<void> => {
     await apiClient.delete(`/services/${id}`);
   },
 };
