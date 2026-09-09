@@ -33,7 +33,7 @@ export const authService = {
   },
 
   getProfile: async (): Promise<User> => {
-    const res = await apiClient.get<User>('/auth/profile');
+    const res = await apiClient.get<User>('/auth/me');
     return res.data;
   },
 

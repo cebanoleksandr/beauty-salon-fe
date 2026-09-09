@@ -25,7 +25,8 @@
     "haveAccount": "Already have an account?",
     "loginError": "Invalid email or password",
     "registerSuccess": "Registration successful, welcome!",
-    "registerError": "Registration failed, please try again"
+    "registerError": "Registration failed, please try again",
+    "roleAdmin": "Admin"
   },
   "common": {
     "loading": "Loading...",
@@ -47,5 +48,15 @@
     "required": "This field is required",
     "emailInvalid": "Enter a valid email",
     "passwordMin": "Password must be at least 6 characters"
+  },
+  "profile": {
+    "title": "My profile",
+    "phone": "Phone",
+    "noPhone": "Not specified",
+    "memberSince": "Member since",
+    "logout": "Log out",
+    "edit": "Edit profile",
+    "updateSuccess": "Profile updated successfully",
+    "updateError": "Failed to update profile"
   }
 }

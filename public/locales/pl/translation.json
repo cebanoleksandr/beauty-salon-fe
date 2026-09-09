@@ -25,7 +25,8 @@
     "haveAccount": "Masz już konto?",
     "loginError": "Nieprawidłowy e-mail lub hasło",
     "registerSuccess": "Rejestracja zakończona, witamy!",
-    "registerError": "Rejestracja nie powiodła się, spróbuj ponownie"
+    "registerError": "Rejestracja nie powiodła się, spróbuj ponownie",
+    "roleAdmin": "Administrator"
   },
   "common": {
     "loading": "Ładowanie...",
@@ -47,5 +48,15 @@
     "required": "To pole jest wymagane",
     "emailInvalid": "Podaj prawidłowy adres e-mail",
     "passwordMin": "Hasło musi mieć co najmniej 6 znaków"
+  },
+  "profile": {
+    "title": "Mój profil",
+    "phone": "Telefon",
+    "noPhone": "Nie podano",
+    "memberSince": "Data rejestracji",
+    "logout": "Wyloguj się",
+    "edit": "Edytuj profil",
+    "updateSuccess": "Profil zaktualizowany",
+    "updateError": "Nie udało się zaktualizować profilu"
   }
 }

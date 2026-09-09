@@ -25,7 +25,8 @@
     "haveAccount": "¿Ya tienes una cuenta?",
     "loginError": "Correo o contraseña incorrectos",
     "registerSuccess": "Registro exitoso, ¡bienvenido!",
-    "registerError": "Error en el registro, inténtalo de nuevo"
+    "registerError": "Error en el registro, inténtalo de nuevo",
+    "roleAdmin": "Administrador"
   },
   "common": {
     "loading": "Cargando...",
@@ -47,5 +48,15 @@
     "required": "Este campo es obligatorio",
     "emailInvalid": "Introduce un correo válido",
     "passwordMin": "La contraseña debe tener al menos 6 caracteres"
+  },
+  "profile": {
+    "title": "Mi perfil",
+    "phone": "Teléfono",
+    "noPhone": "No especificado",
+    "memberSince": "Miembro desde",
+    "logout": "Cerrar sesión",
+    "edit": "Editar perfil",
+    "updateSuccess": "Perfil actualizado correctamente",
+    "updateError": "No se pudo actualizar el perfil"
   }
 }
