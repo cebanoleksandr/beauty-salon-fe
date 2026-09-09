@@ -91,5 +91,19 @@
     "workingHoursTitle": "Working hours",
     "noWorkingHours": "No schedule set",
     "dayOff": "Day off"
+  },
+  "bookings": {
+    "newTitle": "New booking",
+    "stepSalon": "1. Choose a salon",
+    "stepMaster": "2. Choose a master",
+    "stepServices": "3. Choose services",
+    "stepDate": "4. Choose date and time",
+    "selectedSalon": "Selected salon",
+    "total": "Total",
+    "noSlots": "No available slots for this date",
+    "comment": "Comment (optional)",
+    "confirm": "Confirm booking",
+    "createSuccess": "Booking created successfully",
+    "createError": "Failed to create booking"
   }
 }

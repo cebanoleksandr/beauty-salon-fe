@@ -65,7 +65,12 @@ export default function MasterDetailPage() {
 
           {master.bio && <p className="text-slate-600 mt-3">{master.bio}</p>}
 
-          <Button component={RouterLink} to="/bookings/new" variant="contained" className="mt-4">
+          <Button
+            component={RouterLink}
+            to={`/bookings/new?salonId=${master.salonId}&masterId=${master.id}`}
+            variant="contained"
+            className="mt-4"
+          >
             {t('salons.bookNow')}
           </Button>
         </div>

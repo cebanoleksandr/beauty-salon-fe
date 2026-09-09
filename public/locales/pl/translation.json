@@ -93,5 +93,19 @@
     "workingHoursTitle": "Godziny pracy",
     "noWorkingHours": "Brak harmonogramu",
     "dayOff": "Dzień wolny"
+  },
+  "bookings": {
+    "newTitle": "Nowa rezerwacja",
+    "stepSalon": "1. Wybierz salon",
+    "stepMaster": "2. Wybierz mistrza",
+    "stepServices": "3. Wybierz usługi",
+    "stepDate": "4. Wybierz datę i godzinę",
+    "selectedSalon": "Wybrany salon",
+    "total": "Razem",
+    "noSlots": "Brak wolnych terminów na ten dzień",
+    "comment": "Komentarz (opcjonalnie)",
+    "confirm": "Potwierdź rezerwację",
+    "createSuccess": "Rezerwacja utworzona pomyślnie",
+    "createError": "Nie udało się utworzyć rezerwacji"
   }
 }

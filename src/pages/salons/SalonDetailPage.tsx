@@ -72,7 +72,7 @@ export default function SalonDetailPage() {
         {salon.description && <p className="text-slate-600 mt-4">{salon.description}</p>}
 
         <div className="flex gap-2 mt-5">
-          <Button component={RouterLink} to="/bookings/new" variant="contained">
+          <Button component={RouterLink} to={`/bookings/new?salonId=${salon.id}`} variant="contained">
             {t('salons.bookNow')}
           </Button>
 

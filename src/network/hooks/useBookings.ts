@@ -8,7 +8,7 @@ export const useAvailability = (params: AvailabilityQuery) =>
   useQuery({
     queryKey: [EQueries.BOOKINGS_AVAILABILITY, params],
     queryFn: () => bookingsService.getAvailability(params),
-    enabled: !!params.masterId && !!params.date,
+    enabled: !!params.masterId && params.serviceIds.length > 0 && !!params.date,
   });
 
 export const useMyBookings = () =>

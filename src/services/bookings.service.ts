@@ -1,9 +1,18 @@
 import { apiClient } from './client';
-import type { AvailabilityQuery, Booking, CreateBookingDto } from '../types/api';
+import type { AvailabilityQuery, AvailabilitySlot, Booking, CreateBookingDto } from '../types/api';
 
 export const bookingsService = {
-  getAvailability: async (params: AvailabilityQuery): Promise<string[]> => {
-    const res = await apiClient.get<string[]>('/bookings/availability', { params });
+  getAvailability: async ({
+    masterId,
+    serviceIds,
+    date,
+  }: AvailabilityQuery): Promise<AvailabilitySlot[]> => {
+    const query = new URLSearchParams({ masterId: String(masterId), date });
+    serviceIds.forEach((id) => query.append('serviceIds[]', String(id)));
+
+    const res = await apiClient.get<AvailabilitySlot[]>(
+      `/bookings/availability?${query.toString()}`,
+    );
     return res.data;
   },
 

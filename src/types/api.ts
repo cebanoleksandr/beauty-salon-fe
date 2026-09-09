@@ -75,11 +75,9 @@ export interface ServiceItem {
 }
 
 export interface MasterService {
-  id: string;
-  masterId: string;
-  serviceId: string;
-  customPrice?: number | null;
-  customDuration?: number | null;
+  id: number;
+  masterId: number;
+  serviceId: number;
   service?: ServiceItem;
   createdAt: string;
   updatedAt: string;
@@ -138,14 +136,19 @@ export interface Booking {
 }
 
 export interface AvailabilityQuery {
-  masterId: string;
-  serviceId?: string;
+  masterId: number;
+  serviceIds: number[];
   date: string; // YYYY-MM-DD
 }
 
+export interface AvailabilitySlot {
+  startAt: string; // ISO рядок
+  endAt: string; // ISO рядок
+}
+
 export interface CreateBookingDto {
-  masterId: string;
-  serviceIds: string[];
+  masterId: number;
+  serviceIds: number[];
   startTime: string; // ISO рядок
   comment?: string;
 }

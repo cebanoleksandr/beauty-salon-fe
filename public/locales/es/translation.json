@@ -91,5 +91,19 @@
     "workingHoursTitle": "Horario de trabajo",
     "noWorkingHours": "Sin horario definido",
     "dayOff": "Día libre"
+  },
+  "bookings": {
+    "newTitle": "Nueva reserva",
+    "stepSalon": "1. Elige un salón",
+    "stepMaster": "2. Elige un maestro",
+    "stepServices": "3. Elige servicios",
+    "stepDate": "4. Elige fecha y hora",
+    "selectedSalon": "Salón seleccionado",
+    "total": "Total",
+    "noSlots": "No hay horarios disponibles para esta fecha",
+    "comment": "Comentario (opcional)",
+    "confirm": "Confirmar reserva",
+    "createSuccess": "Reserva creada correctamente",
+    "createError": "No se pudo crear la reserva"
   }
 }
