@@ -5,15 +5,17 @@ import './index.css'
 import { QueryClientProvider } from '@tanstack/react-query'
 import queryClient from './network/queryClient.ts'
 import router from './routing'
+import { Provider } from 'react-redux'
+import { store } from './store/store.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Suspense fallback={null}>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
         </QueryClientProvider>
-      {/* </Provider> */}
+      </Provider>
     </Suspense>
   </StrictMode>,
 )
