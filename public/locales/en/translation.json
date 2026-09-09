@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "Beauty Salon"
+  },
+  "nav": {
+    "home": "Home",
+    "salons": "Salons",
+    "myBookings": "My bookings",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "role": "Role",
+    "roleClient": "Client",
+    "roleMaster": "Master",
+    "roleSalonOwner": "Salon owner",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?"
+  },
+  "common": {
+    "loading": "Loading...",
+    "inProgress": "This page is under construction.",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "pages": {
+    "salonDetail": "Salon",
+    "salonManage": "Manage salon",
+    "masterDetail": "Master",
+    "masterDashboard": "Master dashboard",
+    "bookingCreate": "New booking",
+    "joinRequests": "Join requests",
+    "workingHours": "Working hours",
+    "notFound": "Page not found"
+  }
+}

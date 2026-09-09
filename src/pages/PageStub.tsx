@@ -1,12 +1,16 @@
+import { useTranslation } from 'react-i18next';
+
 interface PageStubProps {
-  title: string;
+  titleKey: string;
 }
 
-export default function PageStub({ title }: PageStubProps) {
+export default function PageStub({ titleKey }: PageStubProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold text-slate-800">{title}</h1>
-      <p className="text-slate-500 mt-2">Страница в розробці.</p>
+      <h1 className="text-2xl font-bold text-slate-800">{t(titleKey)}</h1>
+      <p className="text-slate-500 mt-2">{t('common.inProgress')}</p>
     </div>
   );
 }

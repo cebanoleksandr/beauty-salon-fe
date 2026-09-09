@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "Beauty Salon"
+  },
+  "nav": {
+    "home": "Головна",
+    "salons": "Салони",
+    "myBookings": "Мої бронювання",
+    "profile": "Профіль",
+    "notifications": "Сповіщення",
+    "logout": "Вийти"
+  },
+  "auth": {
+    "login": "Вхід",
+    "register": "Реєстрація",
+    "email": "Електронна пошта",
+    "password": "Пароль",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "role": "Роль",
+    "roleClient": "Клієнт",
+    "roleMaster": "Майстер",
+    "roleSalonOwner": "Власник салону",
+    "noAccount": "Немає облікового запису?",
+    "haveAccount": "Вже є облiковий запис?"
+  },
+  "common": {
+    "loading": "Завантаження...",
+    "inProgress": "Сторінка в розробці.",
+    "save": "Зберегти",
+    "cancel": "Скасувати"
+  },
+  "pages": {
+    "salonDetail": "Салон",
+    "salonManage": "Керування салоном",
+    "masterDetail": "Майстер",
+    "masterDashboard": "Кабінет майстра",
+    "bookingCreate": "Нове бронювання",
+    "joinRequests": "Заявки на приєднання",
+    "workingHours": "Робочі години",
+    "notFound": "Сторінку не знайдено"
+  }
+}

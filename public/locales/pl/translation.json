@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "Beauty Salon"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "salons": "Salony",
+    "myBookings": "Moje rezerwacje",
+    "profile": "Profil",
+    "notifications": "Powiadomienia",
+    "logout": "Wyloguj się"
+  },
+  "auth": {
+    "login": "Logowanie",
+    "register": "Rejestracja",
+    "email": "E-mail",
+    "password": "Hasło",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "role": "Rola",
+    "roleClient": "Klient",
+    "roleMaster": "Mistrz",
+    "roleSalonOwner": "Właściciel salonu",
+    "noAccount": "Nie masz konta?",
+    "haveAccount": "Masz już konto?"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "inProgress": "Strona w budowie.",
+    "save": "Zapisz",
+    "cancel": "Anuluj"
+  },
+  "pages": {
+    "salonDetail": "Salon",
+    "salonManage": "Zarządzanie salonem",
+    "masterDetail": "Mistrz",
+    "masterDashboard": "Panel mistrza",
+    "bookingCreate": "Nowa rezerwacja",
+    "joinRequests": "Wnioski o dołączenie",
+    "workingHours": "Godziny pracy",
+    "notFound": "Strona nie znaleziona"
+  }
+}
