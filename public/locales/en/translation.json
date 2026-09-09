@@ -22,7 +22,10 @@
     "roleMaster": "Master",
     "roleSalonOwner": "Salon owner",
     "noAccount": "Don't have an account?",
-    "haveAccount": "Already have an account?"
+    "haveAccount": "Already have an account?",
+    "loginError": "Invalid email or password",
+    "registerSuccess": "Registration successful, welcome!",
+    "registerError": "Registration failed, please try again"
   },
   "common": {
     "loading": "Loading...",
@@ -39,5 +42,10 @@
     "joinRequests": "Join requests",
     "workingHours": "Working hours",
     "notFound": "Page not found"
+  },
+  "validation": {
+    "required": "This field is required",
+    "emailInvalid": "Enter a valid email",
+    "passwordMin": "Password must be at least 6 characters"
   }
 }

@@ -22,7 +22,10 @@
     "roleMaster": "Maestro",
     "roleSalonOwner": "Propietario del salón",
     "noAccount": "¿No tienes una cuenta?",
-    "haveAccount": "¿Ya tienes una cuenta?"
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "loginError": "Correo o contraseña incorrectos",
+    "registerSuccess": "Registro exitoso, ¡bienvenido!",
+    "registerError": "Error en el registro, inténtalo de nuevo"
   },
   "common": {
     "loading": "Cargando...",
@@ -39,5 +42,10 @@
     "joinRequests": "Solicitudes de incorporación",
     "workingHours": "Horario de trabajo",
     "notFound": "Página no encontrada"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "emailInvalid": "Introduce un correo válido",
+    "passwordMin": "La contraseña debe tener al menos 6 caracteres"
   }
 }

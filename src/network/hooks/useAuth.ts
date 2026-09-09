@@ -22,6 +22,9 @@ export const useLogin = () => {
 export const useRegister = () =>
   useMutation({
     mutationFn: (data: RegisterDto) => authService.register(data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [EQueries.PROFILE] });
+    },
   });
 
 export const useLogout = () => {

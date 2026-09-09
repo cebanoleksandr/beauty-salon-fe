@@ -22,7 +22,10 @@
     "roleMaster": "Mistrz",
     "roleSalonOwner": "Właściciel salonu",
     "noAccount": "Nie masz konta?",
-    "haveAccount": "Masz już konto?"
+    "haveAccount": "Masz już konto?",
+    "loginError": "Nieprawidłowy e-mail lub hasło",
+    "registerSuccess": "Rejestracja zakończona, witamy!",
+    "registerError": "Rejestracja nie powiodła się, spróbuj ponownie"
   },
   "common": {
     "loading": "Ładowanie...",
@@ -39,5 +42,10 @@
     "joinRequests": "Wnioski o dołączenie",
     "workingHours": "Godziny pracy",
     "notFound": "Strona nie znaleziona"
+  },
+  "validation": {
+    "required": "To pole jest wymagane",
+    "emailInvalid": "Podaj prawidłowy adres e-mail",
+    "passwordMin": "Hasło musi mieć co najmniej 6 znaków"
   }
 }

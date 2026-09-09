@@ -26,6 +26,9 @@ export const authService = {
 
   register: async (data: RegisterDto): Promise<AuthResponse> => {
     const res = await apiClient.post<AuthResponse>('/auth/register', data);
+    if (res.data.accessToken) {
+      localStorage.setItem('beauty_access_token', res.data.accessToken);
+    }
     return res.data;
   },
 
