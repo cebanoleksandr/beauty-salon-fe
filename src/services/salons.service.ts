@@ -9,6 +9,12 @@ import type {
 export type CreateSalonDto = Omit<Salon, 'id' | 'createdAt' | 'updatedAt' | 'owner'>;
 export type UpdateSalonDto = Partial<CreateSalonDto>;
 
+export type SearchSalonsQueryDto = {
+  q: string;
+  lat?: number;
+  lng?: number;
+};
+
 export const salonsService = {
   getAll: async (params?: PaginationQuery): Promise<PaginatedResult<Salon>> => {
     const res = await apiClient.get<PaginatedResult<Salon>>('/salons', { params });
@@ -17,6 +23,13 @@ export const salonsService = {
 
   getNearby: async (params: NearbySalonsQuery): Promise<Salon[]> => {
     const res = await apiClient.get<Salon[]>('/salons/nearby', { params });
+    return res.data;
+  },
+
+  search: async (params: SearchSalonsQueryDto): Promise<(Salon & {
+    distanceKm: number | null;
+  })[]> => {
+    const res = await apiClient.get<(Salon & { distanceKm: number | null })[]>('/salons/search', { params });
     return res.data;
   },
 

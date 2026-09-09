@@ -58,5 +58,11 @@
     "edit": "Editar perfil",
     "updateSuccess": "Perfil actualizado correctamente",
     "updateError": "No se pudo actualizar el perfil"
+  },
+  "salons": {
+    "nearby": "Salones cercanos",
+    "emptyNearby": "No se encontraron salones cercanos",
+    "locationUnavailable": "Ubicación no disponible: activa la geolocalización para ver salones cercanos",
+    "searchPlaceholder": "Buscar una ubicación..."
   }
 }

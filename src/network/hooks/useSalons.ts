@@ -3,6 +3,7 @@ import queryClient from '../queryClient';
 import {
   salonsService,
   type CreateSalonDto,
+  type SearchSalonsQueryDto,
   type UpdateSalonDto,
 } from '../../services/salons.service';
 import type { NearbySalonsQuery, PaginationQuery } from '../../types/api';
@@ -18,7 +19,14 @@ export const useNearbySalons = (params: NearbySalonsQuery) =>
   useQuery({
     queryKey: [EQueries.SALONS_NEARBY, params],
     queryFn: () => salonsService.getNearby(params),
-    enabled: !!params.latitude && !!params.longitude,
+    enabled: !!params.lat && !!params.lng,
+  });
+
+export const useSearchSalons = (params: SearchSalonsQueryDto) =>
+  useQuery({
+    queryKey: [EQueries.SALONS_SEARCH, params],
+    queryFn: () => salonsService.search(params),
+    enabled: !!params.q,
   });
 
 export const useSalon = (id: string) =>

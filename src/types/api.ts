@@ -7,7 +7,7 @@ export interface PaginationQuery {
 }
 
 export interface PaginatedResult<T> {
-  data: T[];
+  items: T[];
   total: number;
   page: number;
   limit: number;
@@ -54,8 +54,8 @@ export interface Salon {
 }
 
 export interface NearbySalonsQuery {
-  latitude: number;
-  longitude: number;
+  lat: number;
+  lng: number;
   radiusKm?: number;
 }
 

@@ -58,5 +58,11 @@
     "edit": "Edit profile",
     "updateSuccess": "Profile updated successfully",
     "updateError": "Failed to update profile"
+  },
+  "salons": {
+    "nearby": "Nearby salons",
+    "emptyNearby": "No salons found nearby",
+    "locationUnavailable": "Location unavailable — enable geolocation to see nearby salons",
+    "searchPlaceholder": "Search a location..."
   }
 }

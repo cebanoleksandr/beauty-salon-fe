@@ -3,6 +3,7 @@ export const EQueries = {
   SALONS: 'salons',
   SALON: 'salon',
   SALONS_NEARBY: 'salons-nearby',
+  SALONS_SEARCH: 'salons-search',
   SERVICES: 'services',
   MASTERS: 'masters',
   MASTER: 'master',
