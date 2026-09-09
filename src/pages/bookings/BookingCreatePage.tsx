@@ -73,9 +73,10 @@ export default function BookingCreatePage() {
   const handleSubmit = () => {
     createBooking(
       {
+        salonId: Number(salonId),
         masterId: masterId ?? 0,
         serviceIds: selectedServiceIds,
-        startTime: slot,
+        startAt: slot,
         comment: comment || undefined,
       },
       {
@@ -160,7 +161,7 @@ export default function BookingCreatePage() {
                     }}
                   />
                 }
-                label={`${service.name} — ${service.price} ₴ (${service.durationMinutes} ${t('salons.minutesShort')})`}
+                label={`${service.name} — ${service.price} ₴ (${service.duration} ${t('salons.minutesShort')})`}
               />
             ))}
           </div>

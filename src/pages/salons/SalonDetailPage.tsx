@@ -107,7 +107,7 @@ export default function SalonDetailPage() {
                 <p className="text-sky-600 font-semibold">{service.price} ₴</p>
               </div>
               <p className="text-xs text-slate-500 mt-1">
-                {service.durationMinutes} {t('salons.minutesShort')}
+                {service.duration} {t('salons.minutesShort')}
               </p>
             </div>
           ))}

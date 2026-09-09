@@ -9,6 +9,7 @@ import { useLogout, useProfile } from '../../network/hooks/useAuth';
 import { useUpdateProfile } from '../../network/hooks/useUsers';
 import { useAppDispatch } from '../../store/hooks';
 import { setAlertAC } from '../../store/alertSlice';
+import ConfirmPopup from '../../components/popups/ConfirmPopup';
 import type { UserRole } from '../../types/api';
 import type { UpdateProfileDto } from '../../services/users.service';
 
@@ -27,6 +28,7 @@ export default function ProfilePage() {
   const logout = useLogout();
   const { mutate: updateProfile, isPending } = useUpdateProfile();
   const [isEditing, setIsEditing] = useState(false);
+  const [isLogoutPopupOpen, setIsLogoutPopupOpen] = useState(false);
 
   const schema = useMemo(
     () =>
@@ -52,6 +54,7 @@ export default function ProfilePage() {
 
   const handleLogout = () => {
     logout();
+    setIsLogoutPopupOpen(false);
     navigate('/login');
   };
 
@@ -158,12 +161,26 @@ export default function ProfilePage() {
             <Button variant="contained" fullWidth onClick={startEditing}>
               {t('profile.edit')}
             </Button>
-            <Button variant="outlined" color="error" fullWidth onClick={handleLogout}>
+            <Button
+              variant="outlined"
+              color="error"
+              fullWidth
+              onClick={() => setIsLogoutPopupOpen(true)}
+            >
               {t('profile.logout')}
             </Button>
           </>
         )}
       </div>
+
+      <ConfirmPopup
+        isVisible={isLogoutPopupOpen}
+        title={t('profile.logoutConfirmTitle')}
+        description={t('profile.logoutConfirmMessage')}
+        confirmColor="error"
+        onConfirm={handleLogout}
+        onClose={() => setIsLogoutPopupOpen(false)}
+      />
     </div>
   );
 }

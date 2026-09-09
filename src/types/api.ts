@@ -68,7 +68,7 @@ export interface ServiceItem {
   salon?: Salon;
   name: string;
   description?: string | null;
-  durationMinutes: number;
+  duration: number;
   price: number;
   createdAt: string;
   updatedAt: string;
@@ -147,9 +147,10 @@ export interface AvailabilitySlot {
 }
 
 export interface CreateBookingDto {
+  salonId: number;
   masterId: number;
   serviceIds: number[];
-  startTime: string; // ISO рядок
+  startAt: string; // ISO рядок
   comment?: string;
 }
 

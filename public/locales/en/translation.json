@@ -39,7 +39,8 @@
     "weekday3": "Thursday",
     "weekday4": "Friday",
     "weekday5": "Saturday",
-    "weekday6": "Sunday"
+    "weekday6": "Sunday",
+    "confirm": "Confirm"
   },
   "pages": {
     "salonDetail": "Salon",
@@ -64,7 +65,9 @@
     "logout": "Log out",
     "edit": "Edit profile",
     "updateSuccess": "Profile updated successfully",
-    "updateError": "Failed to update profile"
+    "updateError": "Failed to update profile",
+    "logoutConfirmTitle": "Log out?",
+    "logoutConfirmMessage": "You'll need to sign in again to access your account."
   },
   "salons": {
     "nearby": "Nearby salons",

@@ -39,7 +39,8 @@
     "weekday3": "Четвер",
     "weekday4": "П'ятниця",
     "weekday5": "Субота",
-    "weekday6": "Неділя"
+    "weekday6": "Неділя",
+    "confirm": "Підтвердити"
   },
   "pages": {
     "salonDetail": "Салон",
@@ -64,7 +65,9 @@
     "logout": "Вийти",
     "edit": "Редагувати профіль",
     "updateSuccess": "Профіль оновлено",
-    "updateError": "Не вдалося оновити профіль"
+    "updateError": "Не вдалося оновити профіль",
+    "logoutConfirmTitle": "Вийти з акаунту?",
+    "logoutConfirmMessage": "Щоб знову скористатися акаунтом, потрібно буде увійти заново."
   },
   "salons": {
     "nearby": "Салони поруч",

@@ -39,7 +39,8 @@
     "weekday3": "Czwartek",
     "weekday4": "Piątek",
     "weekday5": "Sobota",
-    "weekday6": "Niedziela"
+    "weekday6": "Niedziela",
+    "confirm": "Potwierdź"
   },
   "pages": {
     "salonDetail": "Salon",
@@ -64,7 +65,9 @@
     "logout": "Wyloguj się",
     "edit": "Edytuj profil",
     "updateSuccess": "Profil zaktualizowany",
-    "updateError": "Nie udało się zaktualizować profilu"
+    "updateError": "Nie udało się zaktualizować profilu",
+    "logoutConfirmTitle": "Wylogować się?",
+    "logoutConfirmMessage": "Aby ponownie skorzystać z konta, trzeba będzie się zalogować."
   },
   "salons": {
     "nearby": "Salony w pobliżu",
