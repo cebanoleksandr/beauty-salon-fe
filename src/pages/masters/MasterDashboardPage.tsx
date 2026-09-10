@@ -2,15 +2,27 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Button, Chip } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useProfile } from '../../network/hooks/useAuth';
-import { useMasterBookings } from '../../network/hooks/useBookings';
+import {
+  useCancelBookingByMaster,
+  useCompleteBooking,
+  useConfirmBooking,
+  useMasterBookings,
+} from '../../network/hooks/useBookings';
 import { useMyMasterServices, useRemoveMasterService } from '../../network/hooks/useMasterServices';
-import type { Booking, BookingStatus } from '../../types/api';
+import { useCancelJoinRequest, useMyJoinRequests } from '../../network/hooks/useJoinRequests';
+import type { Booking, BookingStatus, JoinRequestStatus } from '../../types/api';
 
 const STATUS_COLOR: Record<BookingStatus, 'warning' | 'success' | 'default' | 'error'> = {
   PENDING: 'warning',
   CONFIRMED: 'success',
   COMPLETED: 'default',
   CANCELLED: 'error',
+};
+
+const JOIN_REQUEST_STATUS_COLOR: Record<JoinRequestStatus, 'warning' | 'success' | 'error'> = {
+  PENDING: 'warning',
+  APPROVED: 'success',
+  REJECTED: 'error',
 };
 
 const UPCOMING_STATUSES: BookingStatus[] = ['PENDING', 'CONFIRMED'];
@@ -24,6 +36,9 @@ function formatDateTime(iso: string) {
 
 function UpcomingBookingCard({ booking }: { booking: Booking }) {
   const { t } = useTranslation();
+  const { mutate: confirmBooking, isPending: isConfirming } = useConfirmBooking();
+  const { mutate: completeBooking, isPending: isCompleting } = useCompleteBooking();
+  const { mutate: cancelBooking, isPending: isCancelling } = useCancelBookingByMaster();
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-4 flex flex-col gap-2">
@@ -46,6 +61,42 @@ function UpcomingBookingCard({ booking }: { booking: Booking }) {
           ))}
         </ul>
       )}
+
+      <div className="flex flex-wrap gap-2 mt-1">
+        {booking.status === 'PENDING' && (
+          <Button
+            size="small"
+            variant="contained"
+            disabled={isConfirming}
+            onClick={() => confirmBooking(booking.id)}
+          >
+            {t('masterDashboard.confirmBooking')}
+          </Button>
+        )}
+
+        {booking.status === 'CONFIRMED' && (
+          <Button
+            size="small"
+            variant="contained"
+            disabled={isCompleting}
+            onClick={() => completeBooking(booking.id)}
+          >
+            {t('masterDashboard.completeBooking')}
+          </Button>
+        )}
+
+        {(booking.status === 'PENDING' || booking.status === 'CONFIRMED') && (
+          <Button
+            size="small"
+            color="error"
+            variant="outlined"
+            disabled={isCancelling}
+            onClick={() => cancelBooking({ id: booking.id })}
+          >
+            {t('masterDashboard.cancelBooking')}
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
@@ -56,6 +107,8 @@ export default function MasterDashboardPage() {
   const { data: bookings, isLoading: isBookingsLoading } = useMasterBookings();
   const { data: myServices, isLoading: isServicesLoading } = useMyMasterServices();
   const { mutate: removeService, isPending: isRemoving } = useRemoveMasterService();
+  const { data: joinRequests, isLoading: isJoinRequestsLoading } = useMyJoinRequests();
+  const { mutate: cancelJoinRequest, isPending: isCancellingJoinRequest } = useCancelJoinRequest();
 
   const upcomingBookings = (bookings ?? [])
     .filter((booking) => UPCOMING_STATUSES.includes(booking.status))
@@ -91,6 +144,55 @@ export default function MasterDashboardPage() {
         <div className="flex flex-col gap-3">
           {upcomingBookings.map((booking) => (
             <UpcomingBookingCard key={booking.id} booking={booking} />
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold text-slate-800 mb-3">
+          {t('masterDashboard.myJoinRequests')}
+        </h2>
+
+        {isJoinRequestsLoading && <p className="text-slate-500 text-sm">{t('common.loading')}</p>}
+
+        {!isJoinRequestsLoading && (joinRequests?.length ?? 0) === 0 && (
+          <p className="text-slate-500 text-sm">{t('masterDashboard.noJoinRequests')}</p>
+        )}
+
+        <div className="flex flex-col gap-3">
+          {joinRequests?.map((joinRequest) => (
+            <div
+              key={joinRequest.id}
+              className="bg-white rounded-xl shadow-sm p-4 flex items-center justify-between gap-3"
+            >
+              <div>
+                <p className="text-sm font-medium text-slate-800">
+                  {joinRequest.salon?.name ?? joinRequest.salonId}
+                </p>
+                {joinRequest.status === 'REJECTED' && joinRequest.rejectionReason && (
+                  <p className="text-xs text-slate-500 mt-1">{joinRequest.rejectionReason}</p>
+                )}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Chip
+                  size="small"
+                  label={t(`masterDashboard.joinRequestStatus.${joinRequest.status}`)}
+                  color={JOIN_REQUEST_STATUS_COLOR[joinRequest.status]}
+                />
+                {joinRequest.status === 'PENDING' && (
+                  <Button
+                    size="small"
+                    color="error"
+                    variant="outlined"
+                    disabled={isCancellingJoinRequest}
+                    onClick={() => cancelJoinRequest(joinRequest.id)}
+                  >
+                    {t('masterDashboard.cancelJoinRequest')}
+                  </Button>
+                )}
+              </div>
+            </div>
           ))}
         </div>
       </section>

@@ -133,7 +133,18 @@
     "manageWorkingHours": "Gestionar horario",
     "myServices": "Mis servicios",
     "noServices": "Todavía no has añadido ningún servicio",
-    "removeService": "Eliminar"
+    "removeService": "Eliminar",
+    "confirmBooking": "Confirmar",
+    "completeBooking": "Completar",
+    "cancelBooking": "Cancelar",
+    "myJoinRequests": "Mis solicitudes para unirme a un salón",
+    "noJoinRequests": "Todavía no has enviado ninguna solicitud",
+    "cancelJoinRequest": "Cancelar solicitud",
+    "joinRequestStatus": {
+      "PENDING": "Pendiente",
+      "APPROVED": "Aprobada",
+      "REJECTED": "Rechazada"
+    }
   },
   "workingHours": {
     "blockedTimeTitle": "Bloquear horario",

@@ -135,7 +135,18 @@
     "manageWorkingHours": "Zarządzaj godzinami pracy",
     "myServices": "Moje usługi",
     "noServices": "Nie dodałeś jeszcze żadnych usług",
-    "removeService": "Usuń"
+    "removeService": "Usuń",
+    "confirmBooking": "Potwierdź",
+    "completeBooking": "Zakończ",
+    "cancelBooking": "Anuluj",
+    "myJoinRequests": "Moje wnioski o dołączenie do salonu",
+    "noJoinRequests": "Nie wysłałeś jeszcze żadnych wniosków",
+    "cancelJoinRequest": "Anuluj wniosek",
+    "joinRequestStatus": {
+      "PENDING": "Oczekujący",
+      "APPROVED": "Zatwierdzony",
+      "REJECTED": "Odrzucony"
+    }
   },
   "workingHours": {
     "blockedTimeTitle": "Zablokuj czas",

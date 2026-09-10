@@ -135,7 +135,18 @@
     "manageWorkingHours": "Керувати робочим часом",
     "myServices": "Мої послуги",
     "noServices": "Ви ще не додали жодної послуги",
-    "removeService": "Видалити"
+    "removeService": "Видалити",
+    "confirmBooking": "Підтвердити",
+    "completeBooking": "Завершити",
+    "cancelBooking": "Скасувати",
+    "myJoinRequests": "Мої заявки на приєднання до салону",
+    "noJoinRequests": "Ви ще не надсилали заявок",
+    "cancelJoinRequest": "Скасувати заявку",
+    "joinRequestStatus": {
+      "PENDING": "Очікує",
+      "APPROVED": "Схвалено",
+      "REJECTED": "Відхилено"
+    }
   },
   "workingHours": {
     "blockedTimeTitle": "Заблокувати час",

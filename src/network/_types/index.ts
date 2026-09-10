@@ -13,6 +13,7 @@ export const EQueries = {
   BOOKINGS_MY: 'bookings-my',
   BOOKINGS_MASTER: 'bookings-master',
   JOIN_REQUESTS: 'join-requests',
+  JOIN_REQUESTS_MY: 'join-requests-my',
   NOTIFICATIONS: 'notifications',
   REVIEWS_SALON: 'reviews-salon',
   WORKING_HOURS: 'working-hours',

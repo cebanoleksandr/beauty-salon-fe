@@ -39,8 +39,23 @@ export const bookingsService = {
     return res.data;
   },
 
-  cancel: async (id: string, reason?: string): Promise<Booking> => {
-    const res = await apiClient.patch<Booking>(`/bookings/${id}/cancel`, { reason });
+  cancelByClient: async (id: string, reason?: string): Promise<Booking> => {
+    const res = await apiClient.patch<Booking>(`/bookings/${id}/cancel-by-client`, { reason });
+    return res.data;
+  },
+
+  cancelByMaster: async (id: string, reason?: string): Promise<Booking> => {
+    const res = await apiClient.patch<Booking>(`/bookings/${id}/cancel-by-master`, { reason });
+    return res.data;
+  },
+
+  confirm: async (id: string): Promise<Booking> => {
+    const res = await apiClient.patch<Booking>(`/bookings/${id}/confirm`);
+    return res.data;
+  },
+
+  complete: async (id: string): Promise<Booking> => {
+    const res = await apiClient.patch<Booking>(`/bookings/${id}/complete`);
     return res.data;
   },
 };

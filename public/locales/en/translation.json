@@ -133,7 +133,18 @@
     "manageWorkingHours": "Manage working hours",
     "myServices": "My services",
     "noServices": "You haven't added any services yet",
-    "removeService": "Remove"
+    "removeService": "Remove",
+    "confirmBooking": "Confirm",
+    "completeBooking": "Complete",
+    "cancelBooking": "Cancel",
+    "myJoinRequests": "My salon join requests",
+    "noJoinRequests": "You haven't sent any join requests",
+    "cancelJoinRequest": "Cancel request",
+    "joinRequestStatus": {
+      "PENDING": "Pending",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    }
   },
   "workingHours": {
     "blockedTimeTitle": "Block time off",

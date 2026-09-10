@@ -34,14 +34,38 @@ export const useCreateBooking = () => {
   });
 };
 
+const invalidateBookings = () => {
+  queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MY] });
+  queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MASTER] });
+  queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_AVAILABILITY] });
+};
+
 export const useCancelBooking = () => {
   return useMutation({
     mutationFn: ({ id, reason }: { id: string; reason?: string }) =>
-      bookingsService.cancel(id, reason),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MY] });
-      queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MASTER] });
-      queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_AVAILABILITY] });
-    },
+      bookingsService.cancelByClient(id, reason),
+    onSuccess: invalidateBookings,
+  });
+};
+
+export const useCancelBookingByMaster = () => {
+  return useMutation({
+    mutationFn: ({ id, reason }: { id: string; reason?: string }) =>
+      bookingsService.cancelByMaster(id, reason),
+    onSuccess: invalidateBookings,
+  });
+};
+
+export const useConfirmBooking = () => {
+  return useMutation({
+    mutationFn: (id: string) => bookingsService.confirm(id),
+    onSuccess: invalidateBookings,
+  });
+};
+
+export const useCompleteBooking = () => {
+  return useMutation({
+    mutationFn: (id: string) => bookingsService.complete(id),
+    onSuccess: invalidateBookings,
   });
 };
