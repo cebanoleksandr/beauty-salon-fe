@@ -115,7 +115,7 @@ export interface BookingServiceItem {
   serviceId: string;
   price: number;
   durationMinutes: number;
-  service?: ServiceItem;
+  serviceName?: string;
 }
 
 export interface Booking {
@@ -123,10 +123,10 @@ export interface Booking {
   userId: string;
   user?: User;
   masterId: string;
-  master?: MasterProfile;
+  master?: User;
   status: BookingStatus;
-  startTime: string; // ISO рядок
-  endTime: string;   // ISO рядок
+  startAt: string; // ISO рядок
+  endAt: string;   // ISO рядок
   totalPrice: number;
   comment?: string | null;
   cancellationReason?: string | null;

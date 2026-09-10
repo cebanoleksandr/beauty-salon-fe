@@ -109,6 +109,19 @@
     "comment": "Komentarz (opcjonalnie)",
     "confirm": "Potwierdź rezerwację",
     "createSuccess": "Rezerwacja utworzona pomyślnie",
-    "createError": "Nie udało się utworzyć rezerwacji"
+    "createError": "Nie udało się utworzyć rezerwacji",
+    "myTitle": "Moje rezerwacje",
+    "empty": "Nie masz jeszcze żadnych rezerwacji",
+    "cancel": "Anuluj rezerwację",
+    "cancelSuccess": "Rezerwacja anulowana",
+    "cancelError": "Nie udało się anulować rezerwacji",
+    "showPast": "Pokaż minione rezerwacje",
+    "hidePast": "Ukryj minione rezerwacje",
+    "status": {
+      "PENDING": "Oczekująca",
+      "CONFIRMED": "Potwierdzona",
+      "COMPLETED": "Zakończona",
+      "CANCELLED": "Anulowana"
+    }
   }
 }

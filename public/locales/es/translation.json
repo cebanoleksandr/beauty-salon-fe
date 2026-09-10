@@ -107,6 +107,19 @@
     "comment": "Comentario (opcional)",
     "confirm": "Confirmar reserva",
     "createSuccess": "Reserva creada correctamente",
-    "createError": "No se pudo crear la reserva"
+    "createError": "No se pudo crear la reserva",
+    "myTitle": "Mis reservas",
+    "empty": "Todavía no tienes reservas",
+    "cancel": "Cancelar reserva",
+    "cancelSuccess": "Reserva cancelada",
+    "cancelError": "No se pudo cancelar la reserva",
+    "showPast": "Mostrar reservas pasadas",
+    "hidePast": "Ocultar reservas pasadas",
+    "status": {
+      "PENDING": "Pendiente",
+      "CONFIRMED": "Confirmada",
+      "COMPLETED": "Completada",
+      "CANCELLED": "Cancelada"
+    }
   }
 }

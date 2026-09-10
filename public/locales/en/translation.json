@@ -107,6 +107,19 @@
     "comment": "Comment (optional)",
     "confirm": "Confirm booking",
     "createSuccess": "Booking created successfully",
-    "createError": "Failed to create booking"
+    "createError": "Failed to create booking",
+    "myTitle": "My bookings",
+    "empty": "You have no bookings yet",
+    "cancel": "Cancel booking",
+    "cancelSuccess": "Booking cancelled",
+    "cancelError": "Failed to cancel booking",
+    "showPast": "Show past bookings",
+    "hidePast": "Hide past bookings",
+    "status": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    }
   }
 }
