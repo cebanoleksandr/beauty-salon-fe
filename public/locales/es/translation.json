@@ -121,5 +121,9 @@
       "COMPLETED": "Completada",
       "CANCELLED": "Cancelada"
     }
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "empty": "Todavía no tienes notificaciones"
   }
 }

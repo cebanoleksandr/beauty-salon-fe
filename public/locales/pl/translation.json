@@ -123,5 +123,9 @@
       "COMPLETED": "Zakończona",
       "CANCELLED": "Anulowana"
     }
+  },
+  "notifications": {
+    "title": "Powiadomienia",
+    "empty": "Nie masz jeszcze żadnych powiadomień"
   }
 }
