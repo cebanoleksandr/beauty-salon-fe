@@ -27,6 +27,7 @@ export interface User {
   role: UserRole;
   phone?: string | null;
   avatarUrl?: string | null;
+  masterId?: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -229,7 +230,7 @@ export interface CreateReviewDto {
 export interface WorkingHour {
   id: string;
   masterId: string;
-  dayOfWeek: number; // 0-6 (0 - Неділя або Понеділок відповідно до логіки бекенду)
+  dayOfWeek: number; // 1-7 (1 - Понеділок ... 7 - Неділя)
   startTime: string; // HH:mm
   endTime: string;   // HH:mm
   isDayOff: boolean;
@@ -245,11 +246,14 @@ export interface SetWorkingHoursDto {
   isDayOff?: boolean;
 }
 
+export type BlockedTimeType = 'BREAK' | 'VACATION' | 'PERSONAL' | 'SICK_LEAVE' | 'OTHER';
+
 export interface BlockedTime {
   id: string;
   masterId: string;
-  startTime: string; // ISO рядок
-  endTime: string;   // ISO рядок
+  type: BlockedTimeType;
+  startAt: string; // ISO рядок
+  endAt: string;   // ISO рядок
   reason?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -257,7 +261,8 @@ export interface BlockedTime {
 
 export interface CreateBlockedTimeDto {
   masterId: string;
-  startTime: string;
-  endTime: string;
+  type: BlockedTimeType;
+  startAt: string;
+  endAt: string;
   reason?: string;
 }

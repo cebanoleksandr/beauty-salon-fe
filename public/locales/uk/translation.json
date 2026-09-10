@@ -136,5 +136,21 @@
     "myServices": "Мої послуги",
     "noServices": "Ви ще не додали жодної послуги",
     "removeService": "Видалити"
+  },
+  "workingHours": {
+    "blockedTimeTitle": "Заблокувати час",
+    "blockStart": "З",
+    "blockEnd": "До",
+    "blockReason": "Причина (необов'язково)",
+    "addBlockedTime": "Додати блокування",
+    "alreadySet": "Вже налаштовано",
+    "blockType": "Тип",
+    "blockTypes": {
+      "BREAK": "Перерва",
+      "VACATION": "Відпустка",
+      "PERSONAL": "Особисте",
+      "SICK_LEAVE": "Лікарняний",
+      "OTHER": "Інше"
+    }
   }
 }

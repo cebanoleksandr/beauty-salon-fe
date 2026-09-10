@@ -5,7 +5,7 @@ import { useMaster } from '../../network/hooks/useMasters';
 import { useSalon } from '../../network/hooks/useSalons';
 import { useWorkingHours } from '../../network/hooks/useWorkingHours';
 
-// Assumes ISO weekday numbering (0 = Monday) since the backend's convention is unconfirmed.
+// Backend dayOfWeek is 1-7 (1 = Monday ... 7 = Sunday); index into this array with dayOfWeek - 1.
 const WEEKDAY_KEYS = [
   'common.weekday0',
   'common.weekday1',
@@ -90,7 +90,7 @@ export default function MasterDetailPage() {
         <div className="bg-white rounded-xl shadow-sm divide-y divide-slate-100">
           {workingHours?.map((wh) => (
             <div key={wh.id} className="flex justify-between px-4 py-2 text-sm">
-              <span className="text-slate-700">{t(WEEKDAY_KEYS[wh.dayOfWeek])}</span>
+              <span className="text-slate-700">{t(WEEKDAY_KEYS[wh.dayOfWeek - 1])}</span>
               <span className="text-slate-500">
                 {wh.isDayOff ? t('masters.dayOff') : `${wh.startTime} – ${wh.endTime}`}
               </span>

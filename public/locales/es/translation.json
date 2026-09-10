@@ -134,5 +134,21 @@
     "myServices": "Mis servicios",
     "noServices": "Todavía no has añadido ningún servicio",
     "removeService": "Eliminar"
+  },
+  "workingHours": {
+    "blockedTimeTitle": "Bloquear horario",
+    "blockStart": "Desde",
+    "blockEnd": "Hasta",
+    "blockReason": "Motivo (opcional)",
+    "addBlockedTime": "Añadir bloqueo",
+    "alreadySet": "Ya configurado",
+    "blockType": "Tipo",
+    "blockTypes": {
+      "BREAK": "Descanso",
+      "VACATION": "Vacaciones",
+      "PERSONAL": "Personal",
+      "SICK_LEAVE": "Baja por enfermedad",
+      "OTHER": "Otro"
+    }
   }
 }

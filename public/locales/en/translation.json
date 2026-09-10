@@ -134,5 +134,21 @@
     "myServices": "My services",
     "noServices": "You haven't added any services yet",
     "removeService": "Remove"
+  },
+  "workingHours": {
+    "blockedTimeTitle": "Block time off",
+    "blockStart": "From",
+    "blockEnd": "To",
+    "blockReason": "Reason (optional)",
+    "addBlockedTime": "Add time off",
+    "alreadySet": "Already set",
+    "blockType": "Type",
+    "blockTypes": {
+      "BREAK": "Break",
+      "VACATION": "Vacation",
+      "PERSONAL": "Personal",
+      "SICK_LEAVE": "Sick leave",
+      "OTHER": "Other"
+    }
   }
 }
