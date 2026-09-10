@@ -1,5 +1,11 @@
 import { apiClient } from './client';
-import type { AvailabilityQuery, AvailabilitySlot, Booking, CreateBookingDto } from '../types/api';
+import type {
+  AvailabilityQuery,
+  AvailabilitySlot,
+  Booking,
+  BookingStatus,
+  CreateBookingDto,
+} from '../types/api';
 
 export const bookingsService = {
   getAvailability: async ({
@@ -23,6 +29,13 @@ export const bookingsService = {
 
   getMyBookings: async (): Promise<Booking[]> => {
     const res = await apiClient.get<Booking[]>('/bookings/my');
+    return res.data;
+  },
+
+  getMasterBookings: async (status?: BookingStatus): Promise<Booking[]> => {
+    const res = await apiClient.get<Booking[]>('/bookings/master', {
+      params: status ? { status } : undefined,
+    });
     return res.data;
   },
 

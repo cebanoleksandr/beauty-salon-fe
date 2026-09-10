@@ -125,5 +125,14 @@
   "notifications": {
     "title": "Notificaciones",
     "empty": "Todavía no tienes notificaciones"
+  },
+  "masterDashboard": {
+    "greeting": "Bienvenido de nuevo, {{name}}",
+    "upcomingBookings": "Próximas reservas",
+    "noUpcomingBookings": "No hay próximas reservas",
+    "manageWorkingHours": "Gestionar horario",
+    "myServices": "Mis servicios",
+    "noServices": "Todavía no has añadido ningún servicio",
+    "removeService": "Eliminar"
   }
 }

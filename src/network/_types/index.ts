@@ -11,6 +11,7 @@ export const EQueries = {
   MASTER_SERVICES_MY: 'master-services-my',
   BOOKINGS_AVAILABILITY: 'bookings-availability',
   BOOKINGS_MY: 'bookings-my',
+  BOOKINGS_MASTER: 'bookings-master',
   JOIN_REQUESTS: 'join-requests',
   NOTIFICATIONS: 'notifications',
   REVIEWS_SALON: 'reviews-salon',

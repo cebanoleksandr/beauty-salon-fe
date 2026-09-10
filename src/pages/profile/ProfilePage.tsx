@@ -150,12 +150,6 @@ export default function ProfilePage() {
                 <span className="text-slate-500">{t('profile.phone')}</span>
                 <span className="text-slate-800">{user.phone ?? t('profile.noPhone')}</span>
               </div>
-              <div className="flex justify-between py-2">
-                <span className="text-slate-500">{t('profile.memberSince')}</span>
-                <span className="text-slate-800">
-                  {new Date(user.createdAt).toLocaleDateString()}
-                </span>
-              </div>
             </div>
 
             <Button variant="contained" fullWidth onClick={startEditing}>

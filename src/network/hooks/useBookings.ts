@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import queryClient from '../queryClient';
 import { bookingsService } from '../../services/bookings.service';
-import type { AvailabilityQuery, CreateBookingDto } from '../../types/api';
+import type { AvailabilityQuery, BookingStatus, CreateBookingDto } from '../../types/api';
 import { EQueries } from '../_types';
 
 export const useAvailability = (params: AvailabilityQuery) =>
@@ -17,11 +17,18 @@ export const useMyBookings = () =>
     queryFn: bookingsService.getMyBookings,
   });
 
+export const useMasterBookings = (status?: BookingStatus) =>
+  useQuery({
+    queryKey: [EQueries.BOOKINGS_MASTER, status],
+    queryFn: () => bookingsService.getMasterBookings(status),
+  });
+
 export const useCreateBooking = () => {
   return useMutation({
     mutationFn: (data: CreateBookingDto) => bookingsService.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MY] });
+      queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MASTER] });
       queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_AVAILABILITY] });
     },
   });
@@ -33,6 +40,7 @@ export const useCancelBooking = () => {
       bookingsService.cancel(id, reason),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MY] });
+      queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_MASTER] });
       queryClient.invalidateQueries({ queryKey: [EQueries.BOOKINGS_AVAILABILITY] });
     },
   });

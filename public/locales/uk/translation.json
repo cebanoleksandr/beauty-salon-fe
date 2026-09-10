@@ -127,5 +127,14 @@
   "notifications": {
     "title": "Сповіщення",
     "empty": "У вас ще немає сповіщень"
+  },
+  "masterDashboard": {
+    "greeting": "Раді бачити, {{name}}",
+    "upcomingBookings": "Найближчі бронювання",
+    "noUpcomingBookings": "Немає найближчих бронювань",
+    "manageWorkingHours": "Керувати робочим часом",
+    "myServices": "Мої послуги",
+    "noServices": "Ви ще не додали жодної послуги",
+    "removeService": "Видалити"
   }
 }
