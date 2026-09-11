@@ -1,6 +1,7 @@
 export const EQueries = {
   PROFILE: 'profile',
   SALONS: 'salons',
+  SALONS_MY: 'salons-my',
   SALON: 'salon',
   SALONS_NEARBY: 'salons-nearby',
   SALONS_SEARCH: 'salons-search',

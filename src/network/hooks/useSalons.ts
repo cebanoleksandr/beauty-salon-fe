@@ -15,6 +15,12 @@ export const useSalons = (params?: PaginationQuery) =>
     queryFn: () => salonsService.getAll(params),
   });
 
+export const useMySalons = () =>
+  useQuery({
+    queryKey: [EQueries.SALONS_MY],
+    queryFn: salonsService.getMy,
+  });
+
 export const useNearbySalons = (params: NearbySalonsQuery) =>
   useQuery({
     queryKey: [EQueries.SALONS_NEARBY, params],
@@ -41,6 +47,7 @@ export const useCreateSalon = () => {
     mutationFn: (data: CreateSalonDto) => salonsService.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SALONS] });
+      queryClient.invalidateQueries({ queryKey: [EQueries.SALONS_MY] });
     },
   });
 };
@@ -51,6 +58,7 @@ export const useUpdateSalon = () => {
       salonsService.update(id, data),
     onSuccess: (updated) => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SALONS] });
+      queryClient.invalidateQueries({ queryKey: [EQueries.SALONS_MY] });
       queryClient.invalidateQueries({ queryKey: [EQueries.SALON, updated.id] });
     },
   });
@@ -61,6 +69,7 @@ export const useDeleteSalon = () => {
     mutationFn: (id: string) => salonsService.delete(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [EQueries.SALONS] });
+      queryClient.invalidateQueries({ queryKey: [EQueries.SALONS_MY] });
     },
   });
 };

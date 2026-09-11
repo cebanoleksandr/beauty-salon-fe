@@ -163,5 +163,18 @@
       "SICK_LEAVE": "Zwolnienie lekarskie",
       "OTHER": "Inne"
     }
+  },
+  "joinRequests": {
+    "noSalons": "Nie posiadasz jeszcze żadnych salonów",
+    "empty": "Brak wniosków",
+    "accept": "Zaakceptuj",
+    "reject": "Odrzuć",
+    "rejectionReason": "Powód (opcjonalnie)",
+    "confirmReject": "Potwierdź odrzucenie",
+    "status": {
+      "PENDING": "Oczekujący",
+      "APPROVED": "Zatwierdzony",
+      "REJECTED": "Odrzucony"
+    }
   }
 }

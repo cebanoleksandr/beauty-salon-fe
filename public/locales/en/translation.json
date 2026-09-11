@@ -161,5 +161,18 @@
       "SICK_LEAVE": "Sick leave",
       "OTHER": "Other"
     }
+  },
+  "joinRequests": {
+    "noSalons": "You don't own any salons yet",
+    "empty": "No join requests yet",
+    "accept": "Accept",
+    "reject": "Reject",
+    "rejectionReason": "Reason (optional)",
+    "confirmReject": "Confirm rejection",
+    "status": {
+      "PENDING": "Pending",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    }
   }
 }

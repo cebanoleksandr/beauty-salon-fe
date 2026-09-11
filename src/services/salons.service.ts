@@ -21,6 +21,11 @@ export const salonsService = {
     return res.data;
   },
 
+  getMy: async (): Promise<Salon[]> => {
+    const res = await apiClient.get<Salon[]>('/salons/my');
+    return res.data;
+  },
+
   getNearby: async (params: NearbySalonsQuery): Promise<Salon[]> => {
     const res = await apiClient.get<Salon[]>('/salons/nearby', { params });
     return res.data;

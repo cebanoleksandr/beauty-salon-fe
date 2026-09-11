@@ -161,5 +161,18 @@
       "SICK_LEAVE": "Baja por enfermedad",
       "OTHER": "Otro"
     }
+  },
+  "joinRequests": {
+    "noSalons": "Todavía no tienes ningún salón",
+    "empty": "Todavía no hay solicitudes",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "rejectionReason": "Motivo (opcional)",
+    "confirmReject": "Confirmar rechazo",
+    "status": {
+      "PENDING": "Pendiente",
+      "APPROVED": "Aprobada",
+      "REJECTED": "Rechazada"
+    }
   }
 }

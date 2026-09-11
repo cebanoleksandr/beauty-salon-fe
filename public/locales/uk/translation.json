@@ -163,5 +163,18 @@
       "SICK_LEAVE": "Лікарняний",
       "OTHER": "Інше"
     }
+  },
+  "joinRequests": {
+    "noSalons": "У вас ще немає власних салонів",
+    "empty": "Заявок ще немає",
+    "accept": "Прийняти",
+    "reject": "Відхилити",
+    "rejectionReason": "Причина (необов'язково)",
+    "confirmReject": "Підтвердити відхилення",
+    "status": {
+      "PENDING": "Очікує",
+      "APPROVED": "Схвалено",
+      "REJECTED": "Відхилено"
+    }
   }
 }
