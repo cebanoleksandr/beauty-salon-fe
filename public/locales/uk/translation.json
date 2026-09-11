@@ -40,7 +40,9 @@
     "weekday4": "П'ятниця",
     "weekday5": "Субота",
     "weekday6": "Неділя",
-    "confirm": "Підтвердити"
+    "confirm": "Підтвердити",
+    "edit": "Редагувати",
+    "delete": "Видалити"
   },
   "pages": {
     "salonDetail": "Салон",
@@ -90,7 +92,28 @@
     "experienceYears_one": "{{count}} рік досвіду",
     "experienceYears_few": "{{count}} роки досвіду",
     "experienceYears_many": "{{count}} років досвіду",
-    "experienceYears_other": "{{count}} років досвіду"
+    "experienceYears_other": "{{count}} років досвіду",
+    "name": "Назва",
+    "description": "Опис",
+    "address": "Адреса",
+    "phone": "Телефон",
+    "latitude": "Широта",
+    "longitude": "Довгота",
+    "saveSuccess": "Салон оновлено",
+    "saveError": "Не вдалося оновити салон",
+    "deleteSalon": "Видалити салон",
+    "deleteError": "Не вдалося видалити салон",
+    "serviceName": "Назва послуги",
+    "serviceDuration": "Тривалість (хв)",
+    "servicePrice": "Ціна",
+    "addService": "Додати послугу",
+    "serviceDeleted": "Послугу видалено",
+    "serviceDeleteError": "Не вдалося видалити послугу",
+    "deleteServiceTitle": "Видалити послугу",
+    "deleteServiceConfirm": "Ви впевнені, що хочете видалити \"{{name}}\"? Цю дію не можна скасувати.",
+    "deleteSalonTitle": "Видалити салон",
+    "deleteSalonConfirm": "Ви впевнені, що хочете видалити \"{{name}}\"? Цю дію не можна скасувати.",
+    "pickLocationHint": "Клацніть або перетягніть маркер на карті, щоб вказати точне місце"
   },
   "masters": {
     "workingHoursTitle": "Робочі години",
@@ -176,5 +199,17 @@
       "APPROVED": "Схвалено",
       "REJECTED": "Відхилено"
     }
+  },
+  "home": {
+    "greeting": "Раді бачити, {{name}}",
+    "subtitle": "Знайдіть салон і забронюйте наступний візит",
+    "browseSalons": "Переглянути салони",
+    "upcomingBookings": "Найближчі бронювання",
+    "noUpcomingBookings": "Немає найближчих бронювань",
+    "viewAllBookings": "Переглянути всі бронювання"
+  },
+  "notFound": {
+    "description": "Сторінку, яку ви шукаєте, не знайдено.",
+    "goHome": "На головну"
   }
 }

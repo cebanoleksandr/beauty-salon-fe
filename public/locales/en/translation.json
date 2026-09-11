@@ -40,7 +40,9 @@
     "weekday4": "Friday",
     "weekday5": "Saturday",
     "weekday6": "Sunday",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "edit": "Edit",
+    "delete": "Delete"
   },
   "pages": {
     "salonDetail": "Salon",
@@ -88,7 +90,28 @@
     "anonymous": "Anonymous",
     "minutesShort": "min",
     "experienceYears": "{{count}} year of experience",
-    "experienceYears_other": "{{count}} years of experience"
+    "experienceYears_other": "{{count}} years of experience",
+    "name": "Name",
+    "description": "Description",
+    "address": "Address",
+    "phone": "Phone",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "saveSuccess": "Salon updated",
+    "saveError": "Failed to update salon",
+    "deleteSalon": "Delete salon",
+    "deleteError": "Failed to delete salon",
+    "serviceName": "Service name",
+    "serviceDuration": "Duration (min)",
+    "servicePrice": "Price",
+    "addService": "Add service",
+    "serviceDeleted": "Service removed",
+    "serviceDeleteError": "Failed to remove service",
+    "deleteServiceTitle": "Delete service",
+    "deleteServiceConfirm": "Are you sure you want to delete \"{{name}}\"? This cannot be undone.",
+    "deleteSalonTitle": "Delete salon",
+    "deleteSalonConfirm": "Are you sure you want to delete \"{{name}}\"? This cannot be undone.",
+    "pickLocationHint": "Click or drag the marker on the map to set the exact location"
   },
   "masters": {
     "workingHoursTitle": "Working hours",
@@ -174,5 +197,17 @@
       "APPROVED": "Approved",
       "REJECTED": "Rejected"
     }
+  },
+  "home": {
+    "greeting": "Welcome back, {{name}}",
+    "subtitle": "Find a salon and book your next appointment",
+    "browseSalons": "Browse salons",
+    "upcomingBookings": "Upcoming bookings",
+    "noUpcomingBookings": "No upcoming bookings",
+    "viewAllBookings": "View all bookings"
+  },
+  "notFound": {
+    "description": "The page you're looking for doesn't exist.",
+    "goHome": "Go to home"
   }
 }

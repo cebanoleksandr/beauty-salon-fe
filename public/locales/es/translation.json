@@ -40,7 +40,9 @@
     "weekday4": "Viernes",
     "weekday5": "Sábado",
     "weekday6": "Domingo",
-    "confirm": "Confirmar"
+    "confirm": "Confirmar",
+    "edit": "Editar",
+    "delete": "Eliminar"
   },
   "pages": {
     "salonDetail": "Salón",
@@ -88,7 +90,28 @@
     "anonymous": "Anónimo",
     "minutesShort": "min",
     "experienceYears": "{{count}} año de experiencia",
-    "experienceYears_other": "{{count}} años de experiencia"
+    "experienceYears_other": "{{count}} años de experiencia",
+    "name": "Nombre",
+    "description": "Descripción",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "saveSuccess": "Salón actualizado",
+    "saveError": "No se pudo actualizar el salón",
+    "deleteSalon": "Eliminar salón",
+    "deleteError": "No se pudo eliminar el salón",
+    "serviceName": "Nombre del servicio",
+    "serviceDuration": "Duración (min)",
+    "servicePrice": "Precio",
+    "addService": "Añadir servicio",
+    "serviceDeleted": "Servicio eliminado",
+    "serviceDeleteError": "No se pudo eliminar el servicio",
+    "deleteServiceTitle": "Eliminar servicio",
+    "deleteServiceConfirm": "¿Seguro que quieres eliminar \"{{name}}\"? Esta acción no se puede deshacer.",
+    "deleteSalonTitle": "Eliminar salón",
+    "deleteSalonConfirm": "¿Seguro que quieres eliminar \"{{name}}\"? Esta acción no se puede deshacer.",
+    "pickLocationHint": "Haz clic o arrastra el marcador en el mapa para indicar la ubicación exacta"
   },
   "masters": {
     "workingHoursTitle": "Horario de trabajo",
@@ -174,5 +197,17 @@
       "APPROVED": "Aprobada",
       "REJECTED": "Rechazada"
     }
+  },
+  "home": {
+    "greeting": "Bienvenido de nuevo, {{name}}",
+    "subtitle": "Encuentra un salón y reserva tu próxima cita",
+    "browseSalons": "Explorar salones",
+    "upcomingBookings": "Próximas reservas",
+    "noUpcomingBookings": "No hay próximas reservas",
+    "viewAllBookings": "Ver todas las reservas"
+  },
+  "notFound": {
+    "description": "La página que buscas no existe.",
+    "goHome": "Ir al inicio"
   }
 }

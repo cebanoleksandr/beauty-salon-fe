@@ -40,7 +40,9 @@
     "weekday4": "Piątek",
     "weekday5": "Sobota",
     "weekday6": "Niedziela",
-    "confirm": "Potwierdź"
+    "confirm": "Potwierdź",
+    "edit": "Edytuj",
+    "delete": "Usuń"
   },
   "pages": {
     "salonDetail": "Salon",
@@ -90,7 +92,28 @@
     "experienceYears_one": "{{count}} rok doświadczenia",
     "experienceYears_few": "{{count}} lata doświadczenia",
     "experienceYears_many": "{{count}} lat doświadczenia",
-    "experienceYears_other": "{{count}} lat doświadczenia"
+    "experienceYears_other": "{{count}} lat doświadczenia",
+    "name": "Nazwa",
+    "description": "Opis",
+    "address": "Adres",
+    "phone": "Telefon",
+    "latitude": "Szerokość geograficzna",
+    "longitude": "Długość geograficzna",
+    "saveSuccess": "Salon zaktualizowany",
+    "saveError": "Nie udało się zaktualizować salonu",
+    "deleteSalon": "Usuń salon",
+    "deleteError": "Nie udało się usunąć salonu",
+    "serviceName": "Nazwa usługi",
+    "serviceDuration": "Czas trwania (min)",
+    "servicePrice": "Cena",
+    "addService": "Dodaj usługę",
+    "serviceDeleted": "Usługa usunięta",
+    "serviceDeleteError": "Nie udało się usunąć usługi",
+    "deleteServiceTitle": "Usuń usługę",
+    "deleteServiceConfirm": "Czy na pewno chcesz usunąć \"{{name}}\"? Tej czynności nie można cofnąć.",
+    "deleteSalonTitle": "Usuń salon",
+    "deleteSalonConfirm": "Czy na pewno chcesz usunąć \"{{name}}\"? Tej czynności nie można cofnąć.",
+    "pickLocationHint": "Kliknij lub przeciągnij znacznik na mapie, aby ustawić dokładną lokalizację"
   },
   "masters": {
     "workingHoursTitle": "Godziny pracy",
@@ -176,5 +199,17 @@
       "APPROVED": "Zatwierdzony",
       "REJECTED": "Odrzucony"
     }
+  },
+  "home": {
+    "greeting": "Witaj ponownie, {{name}}",
+    "subtitle": "Znajdź salon i zarezerwuj kolejną wizytę",
+    "browseSalons": "Przeglądaj salony",
+    "upcomingBookings": "Nadchodzące rezerwacje",
+    "noUpcomingBookings": "Brak nadchodzących rezerwacji",
+    "viewAllBookings": "Zobacz wszystkie rezerwacje"
+  },
+  "notFound": {
+    "description": "Strona, której szukasz, nie istnieje.",
+    "goHome": "Przejdź do strony głównej"
   }
 }
